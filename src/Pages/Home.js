@@ -21,10 +21,10 @@ const Home = () => {
         <Navbar />
       </div>
       {/* Hero Section with Video */}
-      <div id="home" className="relative w-full h-[800px] mt-16">
+      <div id="home" className="relative w-full h-[70vh] md:h-[800px] mt-16">
         <video
           src={Vedio}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           autoPlay
           loop
           muted
