@@ -100,8 +100,8 @@ const Services = () => {
   </p>
   <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
     <li className="bg-white shadow-md rounded-md p-4 flex flex-col items-center">
-      <img src={img1} alt="Aerospace" className="w-full h-full object-cover mb-2" />
-      <span>Aerospace</span>
+      <img src={img1} alt="Aerospace" className="w-full h-full object-fit mb-2" />
+      <span className="text-start font-dmsans text-bold">Aerospace</span>
     </li>
     <li className="bg-white shadow-md rounded-md p-4 flex flex-col items-center">
       <img src={img2} alt="Automotive" className="w-full h-full object-cover mb-2" />
