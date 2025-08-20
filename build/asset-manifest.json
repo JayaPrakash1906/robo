@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bbf4387c.css",
-    "main.js": "/static/js/main.28d164a9.js",
+    "main.css": "/static/css/main.445b3bfc.css",
+    "main.js": "/static/js/main.3d2eca9c.js",
     "static/js/488.5dc00adb.chunk.js": "/static/js/488.5dc00adb.chunk.js",
     "static/media/Media.mp4": "/static/media/Media.2c1d3bf88b985d899e08.mp4",
     "static/media/biomedical.png": "/static/media/biomedical.82b1229911242a9f0c7e.png",
@@ -12,12 +12,12 @@
     "static/media/Eldho_paul.jpg": "/static/media/Eldho_paul.300deb10f3e665ec6d1f.jpg",
     "static/media/sahil_bharti.jpg": "/static/media/sahil_bharti.62c2ac6e77eaa0fd42e3.jpg",
     "index.html": "/index.html",
-    "main.bbf4387c.css.map": "/static/css/main.bbf4387c.css.map",
-    "main.28d164a9.js.map": "/static/js/main.28d164a9.js.map",
+    "main.445b3bfc.css.map": "/static/css/main.445b3bfc.css.map",
+    "main.3d2eca9c.js.map": "/static/js/main.3d2eca9c.js.map",
     "488.5dc00adb.chunk.js.map": "/static/js/488.5dc00adb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbf4387c.css",
-    "static/js/main.28d164a9.js"
+    "static/css/main.445b3bfc.css",
+    "static/js/main.3d2eca9c.js"
   ]
 }

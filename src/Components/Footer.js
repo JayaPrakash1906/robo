@@ -1,73 +1,82 @@
 import React from "react";
-import { FaChevronRight } from "react-icons/fa";
 import { GrLinkedin, GrYoutube } from "react-icons/gr";
-import { FaXTwitter } from "react-icons/fa6"; // FontAwesome 6
+import { FiMail } from "react-icons/fi";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 
 const Footer = () => {
   return (
     <div className="mt-6 font-dmsans">
-      {/* Top bar - Horizontal Navigation and Newsletter Label */}
-      <div className="w-full bg-black text-white px-6 md:px-10 py-6 flex flex-col md:flex-row md:items-center md:justify-between">
-        {/* Navigation Links (horizontal) */}
-        <div className="font-semibold text-sm tracking-wider">
-          <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            {[
-              { name: "HOME", path: "#home" },
-              { name: "SERVICE", path: "#industries" },
-              { name: "ABOUT US", path: "#team" },
-              { name: "CONTACT US", path: "#join-us" },
-            ].map((link, index) => (
-              <a
-                key={index}
-                href={link.path}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector(link.path);
-                  if (element) {
-                    const navbarHeight = 80; // Approximate navbar height
-                    const elementPosition = element.offsetTop - navbarHeight;
-                    window.scrollTo({
-                      top: elementPosition,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
-                className="transition-colors duration-300 hover:text-yellow-400 cursor-pointer"
-              >
-                {link.name}
-              </a>
-            ))}
+      {/* Footer main section: Quick Links, Contact, Map */}
+      <div className="w-full bg-black text-white px-6 md:px-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Contact (left) */}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold">Contact</h3>
+            <div className="mt-4 space-y-4 text-sm">
+              <div className="flex items-center justify-center gap-3">
+                <FiMail className="text-yellow-400" size={18} />
+                <a href="mailto:info@roboinform.com" className="text-yellow-400  hover:underline">support@roboinform.in</a>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <FaMapMarkerAlt className="text-yellow-400" size={18} />
+                <div className="text-center">
+                  <p>Sudha & Shankar Innovation Hub</p>
+                  <p>Indian Institute of Technology Madras</p>
+                  <p>Chennai – 60036, India</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Newsletter label */}
-        <div className="mt-6 md:mt-0 text-sm font-semibold tracking-wider text-yellow-400 text-center md:text-left">
-          SIGN UP FOR OUR NEWSLETTER
-        </div>
-      </div>
+          {/* Quick Links (center) */}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold">Quick Links</h3>
+            <div className="mt-4 font-semibold text-sm tracking-wider">
+              <div className="flex flex-col items-center gap-2">
+                {[
+                  { name: "HOME", path: "#home" },
+                  { name: "SERVICE", path: "#industries" },
+                  { name: "ABOUT US", path: "#team" },
+                  { name: "CONTACT US", path: "#join-us" },
+                ].map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(link.path);
+                      if (element) {
+                        const navbarHeight = 80; // Approximate navbar height
+                        const elementPosition = element.offsetTop - navbarHeight;
+                        window.scrollTo({
+                          top: elementPosition,
+                          behavior: 'smooth'
+                        });
+                      }
+                    }}
+                    className="transition-colors duration-300 hover:text-yellow-400 cursor-pointer"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
 
-      {/* Bottom bar - Social + Email signup */}
-      <div className="w-full bg-black text-white px-6 md:px-10 py-4 flex flex-col md:flex-row items-center md:justify-between gap-4">
-        <div className="flex items-center gap-5">
-          <a href="https://www.linkedin.com/company/roboinform/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <GrLinkedin size={25} className="text-yellow-400 hover:text-white transition-colors" />
-          </a>
-          <a href="https://youtube.com/@roboinform?si=EPLgA9IXUGt2dwZW" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <GrYoutube size={25} className="text-yellow-400 hover:text-white transition-colors" />
-          </a>
-         
-        </div>
+          {/* Follow Us (right) */}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold">Follow Us</h3>
+            <div className="mt-4 flex items-center justify-center gap-5">
+              <a href="https://www.linkedin.com/company/roboinform/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <GrLinkedin size={25} className="text-yellow-400 hover:text-white transition-colors" />
+              </a>
+              <a href="https://youtube.com/@roboinform?si=EPLgA9IXUGt2dwZW" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <GrYoutube size={25} className="text-yellow-400 hover:text-white transition-colors" />
+              </a>
+            </div>
+          </div>
 
-        <div className="flex w-full md:w-auto items-center gap-3">
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="px-4 h-10 border border-white bg-black rounded-md focus:ring-1 focus:ring-white focus:outline-none w-full md:w-[280px] placeholder-white"
-          />
-          <button className="group h-10 w-10 flex items-center justify-center border border-white rounded-md bg-black hover:bg-yellow-400 transition duration-300" aria-label="Subscribe">
-            <FaChevronRight className="text-white text-base group-hover:text-black" />
-          </button>
         </div>
       </div>
 
